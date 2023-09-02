@@ -1,10 +1,15 @@
-import React from 'react';
-function App() {
+import React from "react";
+import { About, Container, MainWrapper, NavBar} from "./components";
+const App: React.FC = () => {
   return (
-    <div className="App">
-      
-    </div>
+    <>
+      <Container>
+        <NavBar/>
+        <MainWrapper />
+        <About/>
+      </Container>
+    </>
   );
-}
+};
 
 export default App;

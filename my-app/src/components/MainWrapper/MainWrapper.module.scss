@@ -1,0 +1,17 @@
+.mainWrapper {
+  height: 780px;
+  background-image: url(../../images/mainBackground.svg);
+  background-repeat: no-repeat;
+  color: #ffffff;
+  font-size: 2rem;
+  &Tittle {
+    text-align: center;
+    position: relative;
+    top: 30%;
+  }
+}
+.vectorLine {
+  width: 1280px;
+  position: absolute;
+  top: 46rem;
+}

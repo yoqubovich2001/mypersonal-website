@@ -1,0 +1,35 @@
+.about {
+  position: relative;
+  background-image: url(../../images/backgorund.svg);
+  text-align: center;
+  padding-top: 50px;
+  color: indianred;
+  &Info {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    margin-top: 60px;
+    color: powderblue;
+  }
+  &Titlle {
+    width: 500px;
+    text-align: left;
+    font-size: 2rem;
+    padding-left: 2rem;
+  }
+  &Bottom{
+    display: flex;
+    justify-content: space-between;
+    padding: 78px;
+  }
+  &List{
+    width: 500px;
+    padding: 5rem;
+    list-style: none;
+    font-size: 2rem;
+    color: powderblue;
+
+
+  }
+}

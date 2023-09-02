@@ -1,0 +1,38 @@
+.navbar {
+  background-color: black;
+  height: 80px;
+  top: 0;
+  position: sticky;
+  z-index: 999;
+  padding-top: 25px;
+  &List {
+    display: flex;
+    width: 760px;
+    justify-content: space-between;
+    margin-left: 450px;
+    list-style: none;
+  }
+  &Btn {
+    display: flex;
+    justify-content: center;
+    width: 90px;
+    height: 30px;
+    padding: 7px;
+    border-radius: 50px;
+    border: 1px solid;
+    border: none;
+    background-color: blue;
+    color: #ffffff;
+  }
+}
+.navbarBtn:hover {
+  cursor: pointer;
+}
+
+.logo {
+  position: absolute;
+  left: 4%;
+}
+.active{
+  color: red;
+}
