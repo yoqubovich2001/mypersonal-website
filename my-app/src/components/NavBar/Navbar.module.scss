@@ -12,7 +12,7 @@
     margin-left: 450px;
     list-style: none;
   }
-  &Btn {
+  &Btn{
     display: flex;
     justify-content: center;
     width: 90px;
@@ -33,6 +33,15 @@
   position: absolute;
   left: 4%;
 }
-.active{
+.active  {
+  // display: flex;
+  // justify-content: center;
+  // width: 90px;
+  // height: 30px;
+  // padding: 7px;
+  // border-radius: 50px;
+  // border: 1px solid;
+  // border: none;
   color: red;
+  background-color: #ffffff;
 }
