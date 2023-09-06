@@ -5,7 +5,6 @@ import certificate from '../../images/certificate.png'
 import technoligies from '../../images/technologies.svg'
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Aos from "aos";
 
 export const About: React.FC = () => {
    useEffect(() => {

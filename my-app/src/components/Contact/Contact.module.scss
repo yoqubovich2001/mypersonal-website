@@ -1,0 +1,38 @@
+.contact {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  padding: 50px 80px 0px 80px;
+  &Msgs {
+    color: whitesmoke;
+    &List {
+      display: grid;
+      row-gap: 25px;
+      li {
+        list-style-type: none;
+        a {
+          color: whitesmoke;
+          span {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+  &Right {
+    display: flex;
+    &Connection {
+      position: absolute;
+      display: grid;
+      row-gap: 60px;
+      right: 38%;
+      a {
+        font-size: 1.5rem;
+        color: whitesmoke;
+        span{
+            margin-left: 20px;
+        }
+      }
+    }
+  }
+}
