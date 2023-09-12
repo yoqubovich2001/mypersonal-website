@@ -4,7 +4,7 @@
   background-color: #1a237e;
   h1 {
     text-align: center;
-    color: indianred
+    color: indianred;
   }
   &Card {
     display: flex;
@@ -45,5 +45,68 @@
 
 .portfolioItem:hover {
   transform: scale(1.1);
-  box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .80), 0 5px 14px 0 rgba(0, 0, 0, .18);
+  box-shadow: 0 26px 58px 0 rgba(0, 0, 0, 0.8), 0 5px 14px 0 rgba(0, 0, 0, 0.18);
+}
+
+@media only screen and (max-width: 1439px) {
+  .container {
+    width: 64rem;
+  }
+
+  .portfolio {
+    width: 1024px;
+    &Item {
+      width: 270px;
+      height: 190px;
+      &Header {
+        width: 270px;
+      }
+      &Link {
+        top: 1.8rem;
+      }
+      &Btn {
+        width: 150px;
+        height: 40px;
+        border: none;
+        border-radius: 50px;
+        background-color: #5cb85c;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .container {
+    width: 45rem;
+  }
+
+  .portfolio {
+    padding: 30px 80px 80px 80px;
+    width: 45rem;
+    &Item {
+      width: 170px;
+      height: 100px;
+      font-size: 10px;
+      &Header {
+        width: 170px;
+        height: 20px;
+        padding: 5px 5px 5px 10px;
+        font-size: 8px;
+      }
+      &Link {
+        top: 0.6rem;
+      }
+      &Btn {
+        width: 100px;
+        height: 20px;
+        border: none;
+        border-radius: 50px;
+        background-color: #5cb85c;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
 }

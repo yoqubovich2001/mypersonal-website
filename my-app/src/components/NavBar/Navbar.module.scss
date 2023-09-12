@@ -12,7 +12,7 @@
     margin-left: 450px;
     list-style: none;
   }
-  &Btn{
+  &Btn {
     display: flex;
     justify-content: center;
     width: 90px;
@@ -33,15 +33,39 @@
   position: absolute;
   left: 4%;
 }
-.active  {
-  // display: flex;
-  // justify-content: center;
-  // width: 90px;
-  // height: 30px;
-  // padding: 7px;
-  // border-radius: 50px;
-  // border: 1px solid;
-  // border: none;
+.active {
   color: red;
   background-color: #ffffff;
+}
+
+@media only screen and (max-width: 1439px) {
+  .container {
+    width: 64rem;
+  }
+  .navbar {
+    width: 64rem;
+  }
+  .navbarList {
+    width: 33rem;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .container {
+    width: 45rem;
+  }
+  .navbar {
+    width: 45rem;
+    &List {
+      width: 30rem;
+      margin-left: 200px;
+    }
+    &Btn {
+      display: flex;
+      justify-content: center;
+      width: 50px;
+      height: 20px;
+      font-size: 8px;
+    }
+  }
 }

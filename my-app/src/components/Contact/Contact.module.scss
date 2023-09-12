@@ -20,17 +20,115 @@
     }
   }
   &Right {
+    width: 650px;
     display: flex;
+    justify-content: space-between;
+    &Adress {
+      position: relative;
+      right: 10rem;
+    }
     &Connection {
-      position: absolute;
       display: grid;
-      row-gap: 60px;
-      right: 38%;
-      a {
+      row-gap: 20px;
+      position: relative;
+      right: 6rem;
+      &Link {
+        display: flex;
+        align-items: center;
         font-size: 1.5rem;
         color: whitesmoke;
-        span{
+        span {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1439px) {
+  .container {
+    width: 64rem;
+  }
+  .map {
+    width: 250px;
+    height: 170px;
+  }
+
+  .contact {
+    &Msgs {
+      &List {
+        row-gap: 15px;
+      }
+    }
+    &Right {
+      width: 600px;
+      display: flex;
+      justify-content: space-between;
+      &Adress {
+        position: relative;
+        right: 2rem;
+      }
+      &Connection {
+        display: grid;
+        row-gap: 20px;
+        position: relative;
+        right: 1rem;
+        &Link {
+          display: flex;
+          align-items: center;
+          font-size: 1rem;
+          color: whitesmoke;
+          span {
             margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .container {
+    width: 45rem;
+  }
+  .map {
+    width: 200px;
+    height: 100px;
+  }
+
+  .icon{
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .contact {
+    width: 45rem;
+    &Msgs {
+      &List {
+        row-gap: 10px;
+      }
+    }
+    &Right {
+      width: 350px;
+      display: block;
+      &Adress {
+        position: relative;
+        right: -5rem;
+      }
+      &Connection {
+        display: grid;
+        row-gap: 20px;
+        position: relative;
+        right: -5rem;
+        &Link {
+          display: flex;
+          align-items: center;
+          font-size: 10px;
+          color: whitesmoke;
+          span {
+            margin-left: 20px;
+          }
         }
       }
     }

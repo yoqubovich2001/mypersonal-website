@@ -18,18 +18,87 @@
     font-size: 2rem;
     padding-left: 2rem;
   }
-  &Bottom{
+  &Bottom {
     display: flex;
     justify-content: space-between;
     padding: 78px;
   }
-  &List{
+  &List {
     width: 500px;
     padding: 5rem;
     list-style: none;
     font-size: 2rem;
     color: powderblue;
+  }
+}
 
+@media only screen and (max-width: 1439px) {
+  .container {
+    width: 64rem;
+  }
+  .about {
+    &Info {
+      width: 45rem;
+      img {
+        width: 400px;
+        height: 300px;
+        position: relative;
+        left: 14rem;
+      }
+    }
+    &Titlle {
+      width: 300px;
+      text-align: left;
+      font-size: 2rem;
+      padding-left: 2rem;
+    }
+    &Bottom {
+      img {
+        width: 400px;
+        height: 400px;
+      }
+    }
+    &List {
+      width: 400px;
+      padding: 0rem;
+      margin-left: 9rem;
+      font-size: 1.9rem;
+    }
+  }
+}
 
+@media only screen and (max-width: 1023px) {
+  .container {
+    width: 45rem;
+  }
+  .about {
+    width: 45rem;
+    &Info {
+      width: 720px;
+      img {
+        width: 250px;
+        height: 150px;
+        position: relative;
+        left: -4rem;
+      }
+    }
+    &Titlle {
+      width: 300px;
+      text-align: left;
+      font-size: 1.4rem;
+      padding-left: 2rem;
+    }
+    &Bottom {
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+    &List {
+      width: 300px;
+      padding: 0rem;
+      margin-left: 2.3rem;
+      font-size: 1.4rem;
+    }
   }
 }

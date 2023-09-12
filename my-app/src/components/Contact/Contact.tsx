@@ -58,6 +58,7 @@ export const Contact: React.FC = () => {
       <div className={styles.contactRight}>
         <div className={styles.contactRightAdress}>
           <iframe
+            className={styles.map}
             src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d5988.271342391294!2d69.266297!3d41.371137!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDIyJzE2LjEiTiA2OcKwMTUnNTguNyJF!5e0!3m2!1suz!2s!4v1693819119467!5m2!1suz!2s"
             width="300"
             height="200"
@@ -67,15 +68,26 @@ export const Contact: React.FC = () => {
           </iframe>
         </div>
         <div className={styles.contactRightConnection}>
-          <a href="#!">
-            <FontAwesomeIcon icon={faEnvelope} size="2xl" />
+          <a className={styles.contactRightConnectionLink} href="#!">
+            <FontAwesomeIcon
+              className={styles.icon}
+              icon={faEnvelope}
+              size="2xl"
+            />
             <span>qobiljonibaydullayev2002@gmail.com</span>
           </a>
 
-          <a href="tel:+998932455510">
+          <a
+            className={styles.contactRightConnectionLink}
+            href="tel:+998932455510"
+          >
             {" "}
-            <FontAwesomeIcon icon={faPhone} size="2xl"/>
-            <span>+998932455519</span>
+            <FontAwesomeIcon
+              className={styles.icon}
+              icon={faPhone}
+              size="2xl"
+            />
+            <span>+998932455510</span>
           </a>
         </div>
       </div>

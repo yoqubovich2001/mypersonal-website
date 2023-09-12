@@ -22,7 +22,7 @@ export const About: React.FC = () => {
             front-end developer. I have more than 6 months of experience in this
             field. I am currently working as a freelancer.
           </p>
-          <img data-aos="fade-left" src={certificate} alt="certificate img" />
+          <img className={styles.aboutInfoImg} data-aos="fade-left" src={certificate} alt="certificate img" />
         </div>
         <div className={styles.aboutBottom}>
           <img

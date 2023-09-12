@@ -4,29 +4,27 @@ import styles from "./Navbar.module.scss";
 import { Link } from "react-scroll";
 import logo from "../../images/logo.png";
 import classNames from 'classnames'
-import { ResumeModal } from "../ResumeModal";
+
 export interface IBannerProps {
   setIsModal: Function;
 }
 export const NavBar: React.FC<IBannerProps> = ({
   setIsModal,
 }: IBannerProps) => {
-  const modalOpen = () => {
-    
-  }
-  useEffect(() => {
-    controlActive();
-  }, []);
   const controlActive = () => {
     const navbar = document.querySelectorAll("button");
     navbar.forEach((element) => {
       element.addEventListener("click", function () {
         navbar.forEach((nav) => nav.classList.remove(styles.active));
-
         this.classList.add(styles.active);
       });
     });
   };
+
+  useEffect(() => {
+    controlActive();
+  }, []);
+
   return (
     <div className={styles.navbar}>
       <img className={styles.logo} src={logo} alt="" />
@@ -35,7 +33,7 @@ export const NavBar: React.FC<IBannerProps> = ({
           <Link to="main" spy={true} smooth={true} offset={50} duration={500}>
             <button
               className={classNames(styles.navbarBtn, styles.active)}
-              onClick={controlActive}
+              onScroll={controlActive}
             >
               Home
             </button>
@@ -43,7 +41,7 @@ export const NavBar: React.FC<IBannerProps> = ({
         </li>
         <li>
           <Link to="about" spy={true} smooth={true} offset={50} duration={500}>
-            <button className={styles.navbarBtn} onClick={controlActive}>
+            <button className={styles.navbarBtn} onScroll={controlActive}>
               About
             </button>
           </Link>
