@@ -11,19 +11,6 @@ export interface IBannerProps {
 export const NavBar: React.FC<IBannerProps> = ({
   setIsModal,
 }: IBannerProps) => {  
-
-  window.addEventListener("scroll", function () {
-    const navbar = document.querySelectorAll("button");
-    navbar.forEach((element) => {
-      element.addEventListener("scroll", function () {
-        
-        navbar.forEach((nav) => nav.classList.remove(styles.active));
-        this.classList.add(styles.active);
-      });
-    });
-    console.log(1);
-  });
-
   const controlActive = () => {
     const navbar = document.querySelectorAll("button");
     navbar.forEach((element) => {
@@ -35,21 +22,8 @@ export const NavBar: React.FC<IBannerProps> = ({
     });
   };
 
-  const scrollHandler = () => {
-    const navbar = document.querySelectorAll("button");
-    navbar.forEach((element) => {
-      element.addEventListener("scroll", function () {
-        navbar.forEach((nav) => nav.classList.remove(styles.active));
-        this.classList.add(styles.active);
-      });
-    });
-  };
-
-
-
   useEffect(() => {
     controlActive();
-    window.addEventListener("scroll",scrollHandler)
   }, []);
 
   return (
