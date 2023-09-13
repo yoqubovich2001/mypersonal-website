@@ -10,19 +10,46 @@ export interface IBannerProps {
 }
 export const NavBar: React.FC<IBannerProps> = ({
   setIsModal,
-}: IBannerProps) => {
+}: IBannerProps) => {  
+
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelectorAll("button");
+    navbar.forEach((element) => {
+      element.addEventListener("scroll", function () {
+        
+        navbar.forEach((nav) => nav.classList.remove(styles.active));
+        this.classList.add(styles.active);
+      });
+    });
+    console.log(1);
+  });
+
   const controlActive = () => {
     const navbar = document.querySelectorAll("button");
     navbar.forEach((element) => {
       element.addEventListener("click", function () {
+        navbar.forEach((nav) => 
+          nav.classList.remove(styles.active));
+        this.classList.add(styles.active);
+      });
+    });
+  };
+
+  const scrollHandler = () => {
+    const navbar = document.querySelectorAll("button");
+    navbar.forEach((element) => {
+      element.addEventListener("scroll", function () {
         navbar.forEach((nav) => nav.classList.remove(styles.active));
         this.classList.add(styles.active);
       });
     });
   };
 
+
+
   useEffect(() => {
     controlActive();
+    window.addEventListener("scroll",scrollHandler)
   }, []);
 
   return (
@@ -30,7 +57,13 @@ export const NavBar: React.FC<IBannerProps> = ({
       <img className={styles.logo} src={logo} alt="" />
       <ul className={styles.navbarList}>
         <li>
-          <Link to="main" spy={true} smooth={true} offset={50} duration={500}>
+          <Link
+            to="main"
+            spy={true}
+            smooth={true}
+            offset={40}
+            duration={500}
+          >
             <button
               className={classNames(styles.navbarBtn, styles.active)}
               onScroll={controlActive}
@@ -40,8 +73,17 @@ export const NavBar: React.FC<IBannerProps> = ({
           </Link>
         </li>
         <li>
-          <Link to="about" spy={true} smooth={true} offset={50} duration={500}>
-            <button className={styles.navbarBtn} onScroll={controlActive}>
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            <button
+              className={styles.navbarBtn }
+              onScroll={controlActive}
+            >
               About
             </button>
           </Link>
