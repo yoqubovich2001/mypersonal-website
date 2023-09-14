@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-
 import styles from "./Navbar.module.scss";
 import { Link } from "react-scroll";
 import logo from "../../images/logo.png";
 import classNames from 'classnames'
-
 export interface IBannerProps {
   setIsModal: Function;
 }

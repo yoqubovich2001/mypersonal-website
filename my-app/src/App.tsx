@@ -7,7 +7,6 @@ const App: React.FC = () => {
   const [scroll, setScroll] = useState(style.overflow='hidden')
   useEffect(() => {
     setScroll(scroll)
-
   },[]);
   return (
     
